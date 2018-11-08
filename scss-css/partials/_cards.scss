@@ -1,0 +1,43 @@
+#cards {
+    header {
+        padding: 20px 0px 5px 0px;
+        text-align: center;
+    }
+    h1 {
+        font-size: 50px;
+        color: white;
+        text-transform: uppercase;
+    }
+    .card-box {
+        display: flex;
+        justify-content: space-between;
+        margin: 15px 0;
+        div {
+            img {
+                width: 100%;
+                max-width: 325px;
+            }
+        }
+        &+.card-box {            
+            div {
+                img {
+                    width: 100%;
+                    max-width: 200px;
+                }
+            }
+        }
+    }
+    footer {
+        .cards-box {
+            display: flex;
+            justify-content: space-between;
+            background: white;
+            padding: 10px;
+            margin: 25px auto;
+            border-radius: 8px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

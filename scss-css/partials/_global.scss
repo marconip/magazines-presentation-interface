@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700,900');
+@font-face {
+    font-family: "icons";
+    src:url("fonts/icons.woff?v=#{random(99999)}") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class*="icon-"]:before {
+    position: relative;
+    font-family: "icons" !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak-as: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-up:before {
+    content: "\61";
+}
+
+.icon-arrow-left:before {
+    content: "\62";
+}
+
+.icon-book:before {
+    content: "\63";
+}
+
+.icon-zoom:before {
+    content: "\64";
+}
+
+/***********END fonts************/
+
+//Fonts
+$font-general: 'Roboto',
+sans-serif;
+$font-icons: 'icons' !important;
+//Transitions
+$time-default: .35s;
+/***********END VARIABLES************/
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+}
+
+body,
+button,
+ul,
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $font-general !important;
+    font-size: 22px;
+    background: black;
+}
+
+ul {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0px;
+}
+
+input[type="reset"], 
+input[type="submit"], 
+button {
+    appearance: none;
+    border: 0;
+    cursor: pointer;
+    transition: $time-default;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    transition: $time-default;
+}
+
+a img {
+    display: block;
+    border: 0;
+}
+
+img {
+    image-rendering: optimizequality;
+    image-rendering: -webkit-optimize-contrast;
+}
+
+iframe {
+    display: block;
+    width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+small {
+    font-size: 80%;
+}
+
+.modal-nav {
+    display: none;
+}
+
+.container,
+footer {
+    margin: auto;
+    width: 100%;
+    max-width: 768px;
+    padding: 0 15px;
+}
+
+/***********END GLOBAL************/

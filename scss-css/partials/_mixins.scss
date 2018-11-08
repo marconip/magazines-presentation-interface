@@ -1,0 +1,33 @@
+@mixin device($devices...){
+	@each $device in $devices {
+	  //Range tablet queries
+	  @if $device == tablet_min{
+		@media (min-width: 768px) { @content; }
+	  }
+	  @if $device == tablet_max{
+		@media (max-width: 991px) { @content; }
+	  }
+  
+	  //Range desktop queries
+	  @if $device == desktop_min{
+		@media (min-width: 992px) { @content; }
+	  }
+	  @if $device == desktop_max{
+		@media (max-width: 1199px) { @content; }
+	  }
+	  
+	  //Scoped queries
+	  @if $device == mobile{
+		@media (max-width: 767px) { @content; }
+	  }
+	  @if $device == tablet{
+		@media (min-width: 768px) and (max-width: 991px) { @content; }
+	  }
+		  @if $device == desktop{
+		@media (min-width: 992px) and (max-width: 1199px) { @content; }
+	  }
+		  @if $device == full{
+		@media (min-width: 1200px) { @content; }
+	  }
+	}
+}  

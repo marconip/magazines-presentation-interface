@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="scss-css/style.css">
+
+    <title>Editora Globo</title>
+    <link rel="shortcut icon" href="image/favicon.ico" />
+</head>
+
+<body>
+    <div class="modal-nav">
+        <a href="#" id="cards" class="icon-arrow-left" title="Cartões"></a>
+        <a href="#" id="magazines" class="icon-arrow-left" title="Revistas"></a>
+        <a href="#" id="magazines-choosed" class="icon-arrow-left" title="Escolhas e Preços"></a>
+        <a href="#" id="magazine-details" class="icon-arrow-left" title="Detalhes"></a>
+        <a href="#" id="gototop" class="icon-arrow-up" title="ir para topo"></a>
+    </div>
+
+    <section id="cards">
+        <header>
+            <h1>Cartões Credenciados</h1>
+        </header>
+
+        <article class="container">
+            <div class="card-box">
+                <div>
+                    <img src="image/card_visa.jpg">
+                </div>
+                <div>
+                    <img src="image/card_mastercard.jpg">
+                </div>
+            </div>
+
+            <div class="card-box">
+                <div>
+                    <img src="image/card_americanex.jpg">
+                </div>
+                <div>
+                    <img src="image/card_elo.png">
+                </div>
+                <div>
+                    <img src="image/card_diners.jpg">
+                </div>
+            </div>
+        </article>
+
+        <footer>
+            <div class="cards-box">
+                <div>
+                    <img src="image/cartoes01.png">
+                </div>
+                <div>
+                    <img src="image/cartoes02.png">
+                </div>
+            </div>
+        </footer>
+    </section>
+
+    <!-- SHOWING MAGAZINES -->
+    <section id="magazines">
+        <header>
+            <div class="container">
+                <div class="header-box">
+                    <img src="image/capa-ep.jpg" class="imgclick">
+                    <a href="detalhes.html" class="icon-book"></a>
+                </div>
+                <div class="header-logo">
+                    <a href="cartoes.html">
+                        <img src="image/epoca_logo.png">
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <h4>campanha nacional de incentivo à leitura</h4>
+
+        <article class="container">
+            <div>
+                <img src="image/capa-gl.jpg" class="imgclick">
+                <a href="detalhes.html#gl" class="icon-book"></a>
+                <input type="checkbox" name="cover" value="" onclick="showhide('img01')" class="selected">
+            </div>
+            <div>
+                <img src="image/capa-mc.jpg" class="imgclick">
+                <a href="detalhes.html#mc" class="icon-book"></a>
+                <input type="checkbox" name="cover" value="" onclick="showhide('img02')" class="selected">
+            </div>
+            <div>
+                <img src="image/capa-gq.jpg" class="imgclick">
+                <a href="detalhes.html#gq" class="icon-book"></a>
+                <input type="checkbox" name="cover" value="" onclick="showhide('img03')" class="selected">
+            </div>
+            <div>
+                <img src="image/capa-vg.jpg" class="imgclick">
+                <a href="detalhes.html#vg" class="icon-book"></a>
+                <input type="checkbox" name="cover" value="" onclick="showhide('img04')" class="selected">
+            </div>
+            <div>
+                <img src="image/capa-gal.jpg" class="imgclick">
+                <a href="detalhes.html#gal" class="icon-book"></a>
+                <input type="checkbox" name="cover" value="" onclick="showhide('img05')" class="selected">
+            </div>
+            <div>
+                <img src="image/capa-cr.jpg" class="imgclick">
+                <a href="detalhes.html#cr" class="icon-book"></a>
+                <input type="checkbox" name="cover" value="" onclick="showhide('img06')" class="selected">
+            </div>
+            <div>
+                <img src="image/capa-cjd.jpg" class="imgclick">
+                <a href="detalhes.html#cjd" class="icon-book"></a>
+                <input type="checkbox" name="cover" value="" onclick="showhide('img07')" class="selected">
+            </div>
+            <div>
+                <img src="image/capa-cvg.jpg" class="imgclick">
+                <a href="detalhes.html#cvg" class="icon-book"></a>
+                <input type="checkbox" name="cover" value="" onclick="showhide('img08')" class="selected">
+            </div>
+            <div>
+                <img src="image/capa-gr.jpg" class="imgclick">
+                <a href="detalhes.html#gr" class="icon-book"></a>
+                <input type="checkbox" name="cover" value="" onclick="showhide('img09')" class="selected">
+            </div>
+            <div>
+                <img src="image/capa-auto.jpg" class="imgclick">
+                <a href="detalhes.html#auto" class="icon-book"></a>
+                <input type="checkbox" name="cover" value="" onclick="showhide('img10')" class="selected">
+            </div>
+            <div>
+                <img src="image/capa-pgn.jpg" class="imgclick">
+                <a href="detalhes.html#pgn" class="icon-book"></a>
+                <input type="checkbox" name="cover" value="" onclick="showhide('img11')" class="selected">
+            </div>
+            <div>
+                <img src="image/capa-neg.jpg" class="imgclick">
+                <a href="detalhes.html#neg" class="icon-book"></a>
+                <input type="checkbox" name="cover" value="" onclick="showhide('img12')" class="selected">
+            </div>
+        </article>
+    </section>
+
+    <!-- VALUES AND MAGAZINES CHOOSED -->
+    <section id="magazines-choosed">
+        <h2>Suas Revistas Escolhidas</h2>
+
+        <div class="magazines-hide container">
+            <div style="display:block"><img id="img00" src="image/capa-ep.jpg"></div>
+            <div><img id="img01" src="image/capa-gl.jpg"></div>
+            <div><img id="img02" src="image/capa-mc.jpg"></div>
+            <div><img id="img03" src="image/capa-gq.jpg"></div>
+            <div><img id="img04" src="image/capa-vg.jpg"></div>
+            <div><img id="img05" src="image/capa-gal.jpg"></div>
+            <div><img id="img06" src="image/capa-cr.jpg"></div>
+            <div><img id="img07" src="image/capa-cjd.jpg"></div>
+            <div><img id="img08" src="image/capa-cvg.jpg"></div>
+            <div><img id="img09" src="image/capa-gr.jpg"></div>
+            <div><img id="img10" src="image/capa-auto.jpg"></div>
+            <div><img id="img11" src="image/capa-pgn.jpg"></div>
+            <div><img id="img12" src="image/capa-neg.jpg"></div>
+        </div>
+
+        <div class="values container">
+            <form>
+                <div class="text-fields">
+                    <div class="fields-price">
+                        <input type="text" class="money" pattern="[0-9]*" inputmode="numeric" maxlength="8">
+                        <input type="text" class="money" pattern="[0-9]*" inputmode="numeric" maxlength="8">
+                        <input type="text" class="money" pattern="[0-9]*" inputmode="numeric" maxlength="8">
+                    </div>
+
+                    <div class="fields-value">
+                        <input type="text" class="money" pattern="[0-9]*" inputmode="numeric" maxlength="8">
+                        <input type="text" class="money" pattern="[0-9]*" inputmode="numeric" maxlength="8">
+                    </div>
+                </div>
+
+                <div class="text-months">
+                    <div>
+                        <input type="text" id="months-price" pattern="[0-9]*" inputmode="numeric" maxlength="2">
+                        <label for="months-price">Meses</label>
+                    </div>
+                    <div>
+                        <input type="text" id="months-value" pattern="[0-9]*" inputmode="numeric" maxlength="2">
+                        <label for="months-value">Meses</label>
+                    </div>
+                </div>
+                <input type="reset" class="clean" value="Limpar">
+            </form>
+        </div>
+    </section>
+
+    <!-- MAGAZINE DETAILS -->
+    <section id="magazine-details">
+        <header>
+            <h2>Nossas Revistas - Detalhes</h2>
+        </header>
+
+        <article>
+            <div class="container">
+                <div class="detail">
+                    <div>
+                        <img src="image/capa-ep.jpg" class="imgclick">
+                    </div>
+                    <div>
+                        <h3>Época</h3>
+                        <p>Aqui você sabe antes, aqui você entende, aqui você aprende.
+                            <br /> Época reúne o que você precisa saber para entender o Brasil e o mundo. É a revista
+                            que antecipa tendências,
+                            debate e respeita a sua opinião.</p>
+                        <strong>Revista semanal</strong>
+                    </div>
+                </div>
+
+                <div id="gl" class="detail">
+                    <div>
+                        <img src="image/capa-gl.jpg" class="imgclick">
+                    </div>
+                    <div>
+                        <h3>Glamour</h3>
+                        <p>Mulher bacana lê Glamour.
+                            <br /> A revista que reúne tudo o que você quer saber sobre moda, beleza, comportamento e
+                            lifestyle, de uma maneira
+                            leve e com uma dose de bom humor.</p>
+                        <strong>Revista mensal</strong>
+                    </div>
+                </div>
+
+                <div id="mc" class="detail">
+                    <div>
+                        <img src="image/capa-mc.jpg" class="imgclick">
+                    </div>
+                    <div>
+                        <h3>Marie Claire</h3>
+                        <p>Chique é ser inteligente.
+                            <br /> Marie Claire é a revista feminina realmente completa, para uma mulher de atitude,
+                            com estilo e conteúdo.</p>
+                        <strong>Revista mensal</strong>
+                    </div>
+                </div>
+
+                <div id="gq" class="detail">
+                    <div>
+                        <img src="image/capa-gq.jpg" class="imgclick">
+                    </div>
+                    <div>
+                        <h3>GQ</h3>
+                        <p>Homem com estilo vive melhor.
+                            <br /> GQ é a revista para o homem moderno, com reportagens e entrevistas sobre moda,
+                            cultura, mulheres, tecnologia,
+                            saúde, viagem, gastronomia, carros, motos e muito mais.</p>
+                        <strong>Revista mensal</strong>
+                    </div>
+                </div>
+
+                <div id="vg" class="detail">
+                    <div>
+                        <img src="image/capa-vg.jpg" class="imgclick">
+                    </div>
+                    <div>
+                        <h3>Vogue</h3>
+                        <p>O primeiro olhar, a última palavra.
+                            <br /> Com o melhor e mais completo conteúdo de moda, Vogue é a bússola das principais
+                            tendências de beleza, cultura
+                            e lifestyle.
+                        </p>
+                        <strong>Revista mensal</strong>
+                    </div>
+                </div>
+
+                <div id="gal" class="detail">
+                    <div>
+                        <img src="image/capa-gal.jpg" class="imgclick">
+                    </div>
+                    <div>
+                        <h3>Galileu</h3>
+                        <p>A ciência ajuda você a mudar o mundo.
+                            <br /> Galileu parte da ciência para entender por que as coisas são como são — e não como
+                            deveriam ser — e aponta caminhos
+                            para que elas sejam diferentes.</p>
+                        <strong>Revista mensal</strong>
+                    </div>
+                </div>
+
+                <div id="cr" class="detail">
+                    <div>
+                        <img src="image/capa-cr.jpg" class="imgclick">
+                    </div>
+                    <div>
+                        <h3>Crescer</h3>
+                        <p>A Vida é Melhor com os Filhos
+                            <br /> CRESCER é a marca companheira da família. Traz as informações mais recentes - e
+                            apuradas com os melhores especialistas
+                            - para estar ao lado dos pais na jornada tão importante que é criar filhos saudáveis e
+                            felizes.</p>
+                        <strong>Revista mensal</strong>
+                    </div>
+                </div>
+
+                <div id="cjd" class="detail">
+                    <div>
+                        <img src="image/capa-cjd.jpg" class="imgclick">
+                    </div>
+                    <div>
+                        <h3>Casa e Jardim</h3>
+                        <p>Sua casa linda do seu jeito.
+                            <br /> Casa e Jardim traz as melhores ideias e soluções de decoração, arquitetura,
+                            paisagismo, gastronomia e reflexões
+                            sobre o morar.</p>
+                        <strong>Revista mensal</strong>
+                    </div>
+                </div>
+
+                <div id="cvg" class="detail">
+                    <div>
+                        <img src="image/capa-cvg.jpg" class="imgclick">
+                    </div>
+                    <div>
+                        <h3>Casa Vogue</h3>
+                        <p>Autoridade máxima em arquitetura, design e decoração.
+                            <br /> A revista que reúne tudo o que você quer saber sobre moda, beleza, comportamento e
+                            lifestyle, de uma maneira
+                            leve e com uma dose de bom humor.</p>
+                        <strong>Revista mensal</strong>
+                    </div>
+                </div>
+
+                <div id="gr" class="detail">
+                    <div>
+                        <img src="image/capa-gr.jpg" class="imgclick">
+                    </div>
+                    <div>
+                        <h3>Globo Rural</h3>
+                        <p>A palavra do campo.
+                            <br /> Com a Globo Rural, você tem a cobertura completa dos fatos que marcaram agronegócio,
+                            tendências econômicas,
+                            ambientais e temas técnicos.</p>
+                        <strong>Revista mensal</strong>
+                    </div>
+                </div>
+
+                <div id="auto" class="detail">
+                    <div>
+                        <img src="image/capa-auto.jpg" class="imgclick">
+                    </div>
+                    <div>
+                        <h3>Autoesporte</h3>
+                        <p>Paixão por carros.
+                            <br /> Autoesporte reúne todas as novidades sobre o mundo dos carros: lançamentos,
+                            comparativos, como fazer o melhor
+                            negócio na hora de comprar ou vender, as últimas tecnologias e muito mais!</p>
+                        <strong>Revista mensal</strong>
+                    </div>
+                </div>
+
+                <div id="pgn" class="detail">
+                    <div>
+                        <img src="image/capa-pgn.jpg" class="imgclick">
+                    </div>
+                    <div>
+                        <h3>Peq. Empresas & Gr. Negócios</h3>
+                        <p>A maior e mais importante comunidade de empreendedores do Brasil.
+                            <br /> Pequenas Empresas & Grandes Negócios tem a missão de ajudar pessoas inovadoras a
+                            transformar ideias em negócios
+                            de sucesso.
+                        </p>
+                        <strong>Revista mensal</strong>
+                    </div>
+                </div>
+
+                <div id="neg" class="detail">
+                    <div>
+                        <img src="image/capa-neg.jpg" class="imgclick">
+                    </div>
+                    <div>
+                        <h3>Negócios</h3>
+                        <p>Inspiração para inovar.
+                            <br /> Época Negócios tem a missão de contar histórias de gente inovadora, apontar
+                            tendências, esmiuçar estratégias
+                            e inspirar nossos leitores a fazer diferente em seus negócios.</p>
+                        <strong>Revista mensal</strong>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <footer>
+            <div class="container">
+                <h5>Cartões Credenciados</h5>
+                <img src="image/cartoes_rodape.png" class="cartoesrodape">
+            </div>
+        </footer>
+
+    </section>
+
+    <!-- MODAL ZOOM MAGAZINE-->
+    <div id="modal" onclick="this.style.display='none'">
+        <div class="modal-content">
+            <img id="modal-img">
+        </div>
+    </div>
+
+    <!-- JS EXTERNAL FILES -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery.mask.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

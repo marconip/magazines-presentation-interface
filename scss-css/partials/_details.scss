@@ -1,13 +1,47 @@
 #magazine-details {
-    h2 {
-        font-size: 30px;
+    .detail {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #565656;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+        &:nth-child(13){
+            border-bottom: 0px;
+        }
+        div {
+            flex: 4;
+            color: #bbb;
+            font-size: 18px;
+            line-height: 20px;
+            &+div {
+                flex: 6;
+            }
+            img {
+                width: 250px;
+                outline: 1px solid #222222;
+            }
+            h3 {
+                font-size: 28px;
+                line-height: 40px;
+                text-transform: uppercase;
+                color: yellow;
+            }
+            strong {
+                line-height: 40px;
+            }
+        }
+    }
+    footer {
         color: #cccccc;
-        text-transform: uppercase;
-        text-align: center;
         background: #333333;
-        border-top: 1px solid #797979;
-        border-bottom: 1px solid #797979;
-        padding: 8px 0;
-        margin: 20px 0;
+        padding: 15px;
+        .container {
+            display: flex;
+            justify-content: space-between;
+            h5{
+                font-size: 30px;
+                line-height: 60px;
+            }
+        }
     }
 }

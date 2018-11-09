@@ -81,8 +81,8 @@ p {
     margin: 0px;
 }
 
-input[type="reset"], 
-input[type="submit"], 
+input[type="reset"],
+input[type="submit"],
 button {
     appearance: none;
     border: 0;
@@ -119,16 +119,42 @@ small {
     font-size: 80%;
 }
 
-.modal-nav {
-    display: none;
+/***********END GLOBAL************/
+
+h2 {
+    font-size: 30px;
+    color: #cccccc;
+    text-transform: uppercase;
+    text-align: center;
+    background: #333333;
+    border-top: 1px solid #797979;
+    border-bottom: 1px solid #797979;
+    padding: 15px 0;
+    margin: 20px 0;
 }
 
-.container,
-footer {
+.container {
     margin: auto;
     width: 100%;
     max-width: 768px;
     padding: 0 15px;
 }
 
-/***********END GLOBAL************/
+.modal-nav {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    background: #ccc;
+    border: 1px solid #797979;
+    padding: 15px;
+    width: 80px;
+    height: 190px;
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#modal {
+    display: none;    
+}

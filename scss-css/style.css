@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700,900");
 @font-face {
   font-family: "icons";
-  src: url("fonts/icons.woff?v=71091") format("woff");
+  src: url("fonts/icons.woff?v=35844") format("woff");
   font-weight: normal;
   font-style: normal; }
 [class*="icon-"]:before {
@@ -92,17 +92,41 @@ table {
 small {
   font-size: 80%; }
 
-.modal-nav {
-  display: none; }
+/***********END GLOBAL************/
+h2 {
+  font-size: 30px;
+  color: #cccccc;
+  text-transform: uppercase;
+  text-align: center;
+  background: #333333;
+  border-top: 1px solid #797979;
+  border-bottom: 1px solid #797979;
+  padding: 15px 0;
+  margin: 20px 0; }
 
-.container,
-footer {
+.container {
   margin: auto;
   width: 100%;
   max-width: 768px;
   padding: 0 15px; }
 
-/***********END GLOBAL************/
+.modal-nav {
+  display: block;
+  display: flex;
+  flex-direction: column;
+  background: #ccc;
+  border: 1px solid #797979;
+  padding: 15px;
+  width: 80px;
+  height: 190px;
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%); }
+
+#modal {
+  display: none; }
+
 #cards header {
   padding: 20px 0px 5px 0px;
   text-align: center; }
@@ -130,22 +154,48 @@ footer {
   #cards footer .cards-box img {
     width: 100%; }
 
-#magazine-details h2 {
-  font-size: 30px;
+#magazine-details .detail {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #565656;
+  padding-bottom: 30px;
+  margin-bottom: 30px; }
+  #magazine-details .detail:nth-child(13) {
+    border-bottom: 0px; }
+  #magazine-details .detail div {
+    flex: 4;
+    color: #bbb;
+    font-size: 18px;
+    line-height: 20px; }
+    #magazine-details .detail div + div {
+      flex: 6; }
+    #magazine-details .detail div img {
+      width: 250px;
+      outline: 1px solid #222222; }
+    #magazine-details .detail div h3 {
+      font-size: 28px;
+      line-height: 40px;
+      text-transform: uppercase;
+      color: yellow; }
+    #magazine-details .detail div strong {
+      line-height: 40px; }
+#magazine-details footer {
   color: #cccccc;
-  text-transform: uppercase;
-  text-align: center;
   background: #333333;
-  border-top: 1px solid #797979;
-  border-bottom: 1px solid #797979;
-  padding: 8px 0;
-  margin: 20px 0; }
+  padding: 15px; }
+  #magazine-details footer .container {
+    display: flex;
+    justify-content: space-between; }
+    #magazine-details footer .container h5 {
+      font-size: 30px;
+      line-height: 60px; }
 
 #magazines header {
   width: 100%;
   margin: 60px 0 0 0;
   padding: 15px 0px 5px 0px;
-  background: linear-gradient(#656565, #000000); }
+  border-top: 1px solid #797979;
+  background: #222; }
   #magazines header .container {
     display: flex;
     align-items: center;
@@ -163,7 +213,7 @@ footer {
   background: #333333;
   border-top: 1px solid #797979;
   border-bottom: 1px solid #797979;
-  padding: 8px 0;
+  padding: 5px 0;
   margin-bottom: 20px; }
 #magazines article.container {
   display: flex;
@@ -171,27 +221,65 @@ footer {
   justify-content: space-between; }
   #magazines article.container div {
     width: 25%;
-    max-width: 173px; }
+    max-width: 173px;
+    margin-bottom: 10px; }
     #magazines article.container div img {
       width: 100%;
       outline: 1px solid #222222; }
+    #magazines article.container div .img-interactions {
+      display: flex;
+      justify-content: space-between;
+      /** CHECKBOX FLAT **/
+      /** END CHECKBOX FLAT **/ }
+      #magazines article.container div .img-interactions .contain {
+        position: relative;
+        right: 25px;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none; }
+        #magazines article.container div .img-interactions .contain input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          height: 0;
+          width: 0; }
+        #magazines article.container div .img-interactions .contain:hover input ~ .checkmark {
+          background-color: #ccc; }
+        #magazines article.container div .img-interactions .contain input:checked ~ .checkmark {
+          background-color: #2196F3; }
+        #magazines article.container div .img-interactions .contain input:checked ~ .checkmark:after {
+          display: block; }
+        #magazines article.container div .img-interactions .contain .checkmark:after {
+          left: 9px;
+          top: 2px;
+          width: 9px;
+          height: 15px;
+          border: solid white;
+          border-width: 0 3px 3px 0;
+          -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          transform: rotate(45deg); }
+      #magazines article.container div .img-interactions .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: #eee; }
+        #magazines article.container div .img-interactions .checkmark:after {
+          content: "";
+          position: absolute;
+          display: none; }
 
-#magazines-choosed h2 {
-  font-size: 30px;
-  color: #cccccc;
-  text-transform: uppercase;
-  text-align: center;
-  background: #333333;
-  border-top: 1px solid #797979;
-  border-bottom: 1px solid #797979;
-  padding: 8px 0;
-  margin: 20px 0; }
 #magazines-choosed .magazines-hide {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; }
   #magazines-choosed .magazines-hide div {
-    display: none;
+    display: block;
     width: 33%;
     max-width: 236px;
     margin-bottom: 15px; }

@@ -12,11 +12,11 @@
 
 <body>
     <div class="modal-nav">
-        <a href="#" id="cards" class="icon-arrow-left" title="Cartões"></a>
-        <a href="#" id="magazines" class="icon-arrow-left" title="Revistas"></a>
-        <a href="#" id="magazines-choosed" class="icon-arrow-left" title="Escolhas e Preços"></a>
-        <a href="#" id="magazine-details" class="icon-arrow-left" title="Detalhes"></a>
-        <a href="#" id="gototop" class="icon-arrow-up" title="ir para topo"></a>
+        <a href="#cards" class="icon-arrow-left" title="Cartões"></a>
+        <a href="#magazines" class="icon-arrow-left" title="Revistas"></a>
+        <a href="#magazines-choosed" class="icon-arrow-left" title="Escolhas e Preços"></a>
+        <a href="#magazine-details" class="icon-arrow-left" title="Detalhes"></a>
+        <a href="#" class="icon-arrow-up" title="Navegação"></a>
     </div>
 
     <section id="cards">
@@ -48,12 +48,14 @@
         </article>
 
         <footer>
-            <div class="cards-box">
-                <div>
-                    <img src="image/cartoes01.png">
-                </div>
-                <div>
-                    <img src="image/cartoes02.png">
+            <div class="container">
+                <div class="cards-box">
+                    <div>
+                        <img src="image/cartoes01.png">
+                    </div>
+                    <div>
+                        <img src="image/cartoes02.png">
+                    </div>
                 </div>
             </div>
         </footer>
@@ -80,63 +82,123 @@
         <article class="container">
             <div>
                 <img src="image/capa-gl.jpg" class="imgclick">
-                <a href="detalhes.html#gl" class="icon-book"></a>
-                <input type="checkbox" name="cover" value="" onclick="showhide('img01')" class="selected">
+                <span class="img-interactions">
+                    <a href="#gl" class="icon-book"></a>
+                    <label class="contain">
+                        <input type="checkbox" onclick="showhide('img01')" class="selected">
+                        <span class="checkmark"></span>
+                    </label>
+                </span>
             </div>
             <div>
                 <img src="image/capa-mc.jpg" class="imgclick">
-                <a href="detalhes.html#mc" class="icon-book"></a>
-                <input type="checkbox" name="cover" value="" onclick="showhide('img02')" class="selected">
+                <span class="img-interactions">
+                    <a href="#mc" class="icon-book"></a>
+                    <label class="contain">
+                        <input type="checkbox" onclick="showhide('img02')" class="selected">
+                        <span class="checkmark"></span>
+                    </label>
+                </span>
             </div>
             <div>
                 <img src="image/capa-gq.jpg" class="imgclick">
-                <a href="detalhes.html#gq" class="icon-book"></a>
-                <input type="checkbox" name="cover" value="" onclick="showhide('img03')" class="selected">
+                <span class="img-interactions">
+                    <a href="#gq" class="icon-book"></a>
+                    <label class="contain">
+                        <input type="checkbox" onclick="showhide('img03')" class="selected">
+                        <span class="checkmark"></span>
+                    </label>
+                </span>
             </div>
             <div>
                 <img src="image/capa-vg.jpg" class="imgclick">
-                <a href="detalhes.html#vg" class="icon-book"></a>
-                <input type="checkbox" name="cover" value="" onclick="showhide('img04')" class="selected">
+                <span class="img-interactions">
+                    <a href="#vg" class="icon-book"></a>
+                    <label class="contain">
+                        <input type="checkbox" onclick="showhide('img04')" class="selected">
+                        <span class="checkmark"></span>
+                    </label>
+                </span>
             </div>
             <div>
                 <img src="image/capa-gal.jpg" class="imgclick">
-                <a href="detalhes.html#gal" class="icon-book"></a>
-                <input type="checkbox" name="cover" value="" onclick="showhide('img05')" class="selected">
+                <span class="img-interactions">
+                    <a href="#gal" class="icon-book"></a>
+                    <label class="contain">
+                        <input type="checkbox" onclick="showhide('img05')" class="selected">
+                        <span class="checkmark"></span>
+                    </label>
+                </span>
             </div>
             <div>
                 <img src="image/capa-cr.jpg" class="imgclick">
-                <a href="detalhes.html#cr" class="icon-book"></a>
-                <input type="checkbox" name="cover" value="" onclick="showhide('img06')" class="selected">
+                <span class="img-interactions">
+                    <a href="#cr" class="icon-book"></a>
+                    <label class="contain">
+                        <input type="checkbox" onclick="showhide('img06')" class="selected">
+                        <span class="checkmark"></span>
+                    </label>
+                </span>
             </div>
             <div>
                 <img src="image/capa-cjd.jpg" class="imgclick">
-                <a href="detalhes.html#cjd" class="icon-book"></a>
-                <input type="checkbox" name="cover" value="" onclick="showhide('img07')" class="selected">
+                <span class="img-interactions">
+                    <a href="#cjd" class="icon-book"></a>
+                    <label class="contain">
+                        <input type="checkbox" onclick="showhide('img07')" class="selected">
+                        <span class="checkmark"></span>
+                    </label>
+                </span>
             </div>
             <div>
                 <img src="image/capa-cvg.jpg" class="imgclick">
-                <a href="detalhes.html#cvg" class="icon-book"></a>
-                <input type="checkbox" name="cover" value="" onclick="showhide('img08')" class="selected">
+                <span class="img-interactions">
+                    <a href="#cvg" class="icon-book"></a>
+                    <label class="contain">
+                        <input type="checkbox" onclick="showhide('img08')" class="selected">
+                        <span class="checkmark"></span>
+                    </label>
+                </span>
             </div>
             <div>
                 <img src="image/capa-gr.jpg" class="imgclick">
-                <a href="detalhes.html#gr" class="icon-book"></a>
-                <input type="checkbox" name="cover" value="" onclick="showhide('img09')" class="selected">
+                <span class="img-interactions">
+                    <a href="#gr" class="icon-book"></a>
+                    <label class="contain">
+                        <input type="checkbox" onclick="showhide('img09')" class="selected">
+                        <span class="checkmark"></span>
+                    </label>
+                </span>
             </div>
             <div>
                 <img src="image/capa-auto.jpg" class="imgclick">
-                <a href="detalhes.html#auto" class="icon-book"></a>
-                <input type="checkbox" name="cover" value="" onclick="showhide('img10')" class="selected">
+                <span class="img-interactions">
+                    <a href="#auto" class="icon-book"></a>
+                    <label class="contain">
+                        <input type="checkbox" onclick="showhide('img10')" class="selected">
+                        <span class="checkmark"></span>
+                    </label>
+                </span>
             </div>
             <div>
                 <img src="image/capa-pgn.jpg" class="imgclick">
-                <a href="detalhes.html#pgn" class="icon-book"></a>
-                <input type="checkbox" name="cover" value="" onclick="showhide('img11')" class="selected">
+                <span class="img-interactions">
+                    <a href="#pgn" class="icon-book"></a>
+                    <label class="contain">
+                        <input type="checkbox" onclick="showhide('img11')" class="selected">
+                        <span class="checkmark"></span>
+                    </label>
+                </span>
             </div>
             <div>
                 <img src="image/capa-neg.jpg" class="imgclick">
-                <a href="detalhes.html#neg" class="icon-book"></a>
-                <input type="checkbox" name="cover" value="" onclick="showhide('img12')" class="selected">
+                <span class="img-interactions">
+                    <a href="#neg" class="icon-book"></a>
+                    <label class="contain">
+                        <input type="checkbox" onclick="showhide('img12')" class="selected">
+                        <span class="checkmark"></span>
+                    </label>
+                </span>
             </div>
         </article>
     </section>
@@ -205,11 +267,11 @@
                     </div>
                     <div>
                         <h3>Época</h3>
+                        <strong>Revista semanal</strong>
                         <p>Aqui você sabe antes, aqui você entende, aqui você aprende.
                             <br /> Época reúne o que você precisa saber para entender o Brasil e o mundo. É a revista
                             que antecipa tendências,
                             debate e respeita a sua opinião.</p>
-                        <strong>Revista semanal</strong>
                     </div>
                 </div>
 
@@ -219,11 +281,11 @@
                     </div>
                     <div>
                         <h3>Glamour</h3>
+                        <strong>Revista mensal</strong>
                         <p>Mulher bacana lê Glamour.
                             <br /> A revista que reúne tudo o que você quer saber sobre moda, beleza, comportamento e
                             lifestyle, de uma maneira
                             leve e com uma dose de bom humor.</p>
-                        <strong>Revista mensal</strong>
                     </div>
                 </div>
 
@@ -233,10 +295,10 @@
                     </div>
                     <div>
                         <h3>Marie Claire</h3>
+                        <strong>Revista mensal</strong>
                         <p>Chique é ser inteligente.
                             <br /> Marie Claire é a revista feminina realmente completa, para uma mulher de atitude,
                             com estilo e conteúdo.</p>
-                        <strong>Revista mensal</strong>
                     </div>
                 </div>
 
@@ -246,11 +308,11 @@
                     </div>
                     <div>
                         <h3>GQ</h3>
+                        <strong>Revista mensal</strong>
                         <p>Homem com estilo vive melhor.
                             <br /> GQ é a revista para o homem moderno, com reportagens e entrevistas sobre moda,
                             cultura, mulheres, tecnologia,
                             saúde, viagem, gastronomia, carros, motos e muito mais.</p>
-                        <strong>Revista mensal</strong>
                     </div>
                 </div>
 
@@ -260,12 +322,12 @@
                     </div>
                     <div>
                         <h3>Vogue</h3>
+                        <strong>Revista mensal</strong>
                         <p>O primeiro olhar, a última palavra.
                             <br /> Com o melhor e mais completo conteúdo de moda, Vogue é a bússola das principais
                             tendências de beleza, cultura
                             e lifestyle.
                         </p>
-                        <strong>Revista mensal</strong>
                     </div>
                 </div>
 
@@ -275,11 +337,11 @@
                     </div>
                     <div>
                         <h3>Galileu</h3>
+                        <strong>Revista mensal</strong>
                         <p>A ciência ajuda você a mudar o mundo.
                             <br /> Galileu parte da ciência para entender por que as coisas são como são — e não como
                             deveriam ser — e aponta caminhos
                             para que elas sejam diferentes.</p>
-                        <strong>Revista mensal</strong>
                     </div>
                 </div>
 
@@ -289,12 +351,12 @@
                     </div>
                     <div>
                         <h3>Crescer</h3>
+                        <strong>Revista mensal</strong>
                         <p>A Vida é Melhor com os Filhos
                             <br /> CRESCER é a marca companheira da família. Traz as informações mais recentes - e
                             apuradas com os melhores especialistas
                             - para estar ao lado dos pais na jornada tão importante que é criar filhos saudáveis e
                             felizes.</p>
-                        <strong>Revista mensal</strong>
                     </div>
                 </div>
 
@@ -304,11 +366,11 @@
                     </div>
                     <div>
                         <h3>Casa e Jardim</h3>
+                        <strong>Revista mensal</strong>
                         <p>Sua casa linda do seu jeito.
                             <br /> Casa e Jardim traz as melhores ideias e soluções de decoração, arquitetura,
                             paisagismo, gastronomia e reflexões
                             sobre o morar.</p>
-                        <strong>Revista mensal</strong>
                     </div>
                 </div>
 
@@ -318,11 +380,11 @@
                     </div>
                     <div>
                         <h3>Casa Vogue</h3>
+                        <strong>Revista mensal</strong>
                         <p>Autoridade máxima em arquitetura, design e decoração.
                             <br /> A revista que reúne tudo o que você quer saber sobre moda, beleza, comportamento e
                             lifestyle, de uma maneira
                             leve e com uma dose de bom humor.</p>
-                        <strong>Revista mensal</strong>
                     </div>
                 </div>
 
@@ -332,11 +394,11 @@
                     </div>
                     <div>
                         <h3>Globo Rural</h3>
+                        <strong>Revista mensal</strong>
                         <p>A palavra do campo.
                             <br /> Com a Globo Rural, você tem a cobertura completa dos fatos que marcaram agronegócio,
                             tendências econômicas,
                             ambientais e temas técnicos.</p>
-                        <strong>Revista mensal</strong>
                     </div>
                 </div>
 
@@ -346,11 +408,11 @@
                     </div>
                     <div>
                         <h3>Autoesporte</h3>
+                        <strong>Revista mensal</strong>
                         <p>Paixão por carros.
                             <br /> Autoesporte reúne todas as novidades sobre o mundo dos carros: lançamentos,
                             comparativos, como fazer o melhor
                             negócio na hora de comprar ou vender, as últimas tecnologias e muito mais!</p>
-                        <strong>Revista mensal</strong>
                     </div>
                 </div>
 
@@ -360,12 +422,12 @@
                     </div>
                     <div>
                         <h3>Peq. Empresas & Gr. Negócios</h3>
+                        <strong>Revista mensal</strong>
                         <p>A maior e mais importante comunidade de empreendedores do Brasil.
                             <br /> Pequenas Empresas & Grandes Negócios tem a missão de ajudar pessoas inovadoras a
                             transformar ideias em negócios
                             de sucesso.
                         </p>
-                        <strong>Revista mensal</strong>
                     </div>
                 </div>
 
@@ -375,11 +437,11 @@
                     </div>
                     <div>
                         <h3>Negócios</h3>
+                        <strong>Revista mensal</strong>
                         <p>Inspiração para inovar.
                             <br /> Época Negócios tem a missão de contar histórias de gente inovadora, apontar
                             tendências, esmiuçar estratégias
                             e inspirar nossos leitores a fazer diferente em seus negócios.</p>
-                        <strong>Revista mensal</strong>
                     </div>
                 </div>
             </div>

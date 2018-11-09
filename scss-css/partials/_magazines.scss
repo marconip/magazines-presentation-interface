@@ -3,7 +3,8 @@
         width: 100%;
         margin: 60px 0 0 0;
         padding: 15px 0px 5px 0px;
-        background: linear-gradient(#656565, #000000);
+        border-top: 1px solid #797979;
+        background: #222;
         .container {
             display: flex;
             align-items: center;
@@ -25,7 +26,7 @@
         background: #333333;
         border-top: 1px solid #797979;
         border-bottom: 1px solid #797979;
-        padding: 8px 0;
+        padding: 5px 0;
         margin-bottom: 20px;
     }
     article {
@@ -36,9 +37,66 @@
             div {
                 width: 25%;
                 max-width: 173px;
+                margin-bottom: 10px;
                 img {
                     width: 100%;
                     outline: 1px solid #222222;
+                }
+                .img-interactions {
+                    display: flex;
+                    justify-content: space-between;
+                    /** CHECKBOX FLAT **/
+                    .contain {
+                        position: relative;
+                        right: 25px;
+                        cursor: pointer;
+                        font-size: 22px;
+                        -webkit-user-select: none;
+                        -moz-user-select: none;
+                        -ms-user-select: none;
+                        user-select: none;
+                        input {
+                            position: absolute;
+                            opacity: 0;
+                            cursor: pointer;
+                            height: 0;
+                            width: 0;
+                        }
+                        &:hover input~.checkmark {
+                            background-color: #ccc;
+                        }
+                        input:checked~.checkmark {
+                            background-color: #2196F3;
+                        }
+                        input:checked~.checkmark:after {
+                            display: block;
+                        }
+                        .checkmark:after {
+                            left: 9px;
+                            top: 2px;
+                            width: 9px;
+                            height: 15px;
+                            border: solid white;
+                            border-width: 0 3px 3px 0;
+                            -webkit-transform: rotate(45deg);
+                            -ms-transform: rotate(45deg);
+                            transform: rotate(45deg);
+                        }
+                    }
+                    .checkmark {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 25px;
+                        width: 25px;
+                        background-color: #eee;
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            display: none;
+                        }
+                    }
+                    /** END CHECKBOX FLAT **/
                 }
             }
         }

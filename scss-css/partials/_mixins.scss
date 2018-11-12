@@ -23,10 +23,10 @@
 	  @if $device == tablet{
 		@media (min-width: 768px) and (max-width: 991px) { @content; }
 	  }
-		  @if $device == desktop{
+		@if $device == desktop{
 		@media (min-width: 992px) and (max-width: 1199px) { @content; }
 	  }
-		  @if $device == full{
+		@if $device == full{
 		@media (min-width: 1200px) { @content; }
 	  }
 	}

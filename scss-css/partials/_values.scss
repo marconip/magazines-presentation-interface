@@ -1,11 +1,11 @@
-#magazines-choosed {    
+#magazines-choosed {
     .magazines-hide {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         div {
             display: block;
-            width: 33%;
+            width: 32%;
             max-width: 236px;
             margin-bottom: 15px;
             img {
@@ -29,17 +29,6 @@
                     color: #888;
                 }
             }
-            input {
-                width: 100%;
-                font-size: 66px;
-                font-weight: bold;
-                text-align: center;
-                background: transparent;
-                margin-bottom: 10px;
-                border: 0px;
-                color: yellow;
-                border-bottom: 1px solid #565656;
-            }
         }
         .text-months {
             display: flex;
@@ -51,34 +40,46 @@
                     input {
                         color: #888;
                     }
+                    label{
+                        color: #888;
+                    }
                 }
             }
             label {
                 font-size: 54px;
-            }
-            input {
-                width: 50%;
-                font-size: 66px;
-                font-weight: bold;
-                text-align: center;
-                background: transparent;
-                margin-bottom: 10px;
-                border: 0px;
-                color: yellow;
-                border-bottom: 1px solid #565656;
+                @include device(mobile) {
+                    font-size: 30px;
+                }
             }
         }
-        .clean {
-            text-transform: uppercase;
-            color: white;
-            background: #555;
+        input {
+            width: 100%;
+            font-size: 66px;
+            font-weight: bold;
+            text-align: center;
+            background: transparent;
+            margin-bottom: 10px;
             border: 0px;
-            border-radius: 5px;
-            padding: 10px;
-            margin-top: 30px;
-            &:hover {
-                color: black;
-                background: white;
+            color: yellow;
+            border-bottom: 1px solid #565656;
+            @include device(mobile) {
+                font-size: 30px;
+            }
+            &.clean {
+                width: auto;
+                font-size: 16px;
+                font-weight: 100;
+                text-transform: uppercase;
+                color: white;
+                background: #555;
+                border: 0px;
+                border-radius: 5px;
+                padding: 10px;
+                margin-top: 30px;
+                &:hover {
+                    color: black;
+                    background: white;
+                }
             }
         }
     }

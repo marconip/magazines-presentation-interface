@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700,900");
 @font-face {
   font-family: "icons";
-  src: url("fonts/icons.woff?v=35844") format("woff");
+  src: url("../fonts/icons.woff?v=9172") format("woff");
   font-weight: normal;
   font-style: normal; }
 [class*="icon-"]:before {
@@ -16,17 +16,23 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.icon-arrow-up:before {
+.icon-zoom:before {
   content: "\61"; }
 
-.icon-arrow-left:before {
+.icon-menu:before {
   content: "\62"; }
 
-.icon-book:before {
+.icon-magazine-open:before {
   content: "\63"; }
 
-.icon-zoom:before {
+.icon-dollar-sign:before {
   content: "\64"; }
+
+.icon-credit-card:before {
+  content: "\65"; }
+
+.icon-magazine-cover:before {
+  content: "\66"; }
 
 /***********END fonts************/
 /***********END VARIABLES************/
@@ -103,26 +109,52 @@ h2 {
   border-bottom: 1px solid #797979;
   padding: 15px 0;
   margin: 20px 0; }
+  @media (max-width: 767px) {
+    h2 {
+      font-size: 20px; } }
 
 .container {
   margin: auto;
   width: 100%;
   max-width: 768px;
   padding: 0 15px; }
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1200px; } }
 
 .modal-nav {
   display: block;
   display: flex;
   flex-direction: column;
-  background: #ccc;
-  border: 1px solid #797979;
-  padding: 15px;
-  width: 80px;
-  height: 190px;
+  background: #222;
+  padding: 10px;
   position: fixed;
-  left: 0;
+  z-index: 9;
+  left: -60px;
   top: 50%;
-  transform: translateY(-50%); }
+  transform: translateY(-50%);
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2); }
+  @media (min-width: 1200px) {
+    .modal-nav {
+      left: 0; } }
+  .modal-nav [class*="icon-"] {
+    background: black;
+    color: white;
+    width: 35px;
+    height: 35px;
+    padding: 6px;
+    margin: 2px; }
+    .modal-nav [class*="icon-"]:hover {
+      background: white;
+      color: black; }
+  .modal-nav .icon-menu {
+    position: relative;
+    left: 48px;
+    background: #555;
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2); }
+    @media (min-width: 1200px) {
+      .modal-nav .icon-menu {
+        left: 0px; } }
 
 #modal {
   display: none; }
@@ -130,10 +162,16 @@ h2 {
 #cards header {
   padding: 20px 0px 5px 0px;
   text-align: center; }
+  @media (max-width: 767px) {
+    #cards header {
+      padding-top: 50px; } }
 #cards h1 {
   font-size: 50px;
   color: white;
   text-transform: uppercase; }
+  @media (max-width: 767px) {
+    #cards h1 {
+      font-size: 24px; } }
 #cards .card-box {
   display: flex;
   justify-content: space-between;
@@ -141,9 +179,15 @@ h2 {
   #cards .card-box div img {
     width: 100%;
     max-width: 325px; }
+    @media (max-width: 767px) {
+      #cards .card-box div img {
+        width: 95%; } }
   #cards .card-box + .card-box div img {
     width: 100%;
     max-width: 200px; }
+    @media (max-width: 767px) {
+      #cards .card-box + .card-box div img {
+        width: 95%; } }
 #cards footer .cards-box {
   display: flex;
   justify-content: space-between;
@@ -154,30 +198,63 @@ h2 {
   #cards footer .cards-box img {
     width: 100%; }
 
-#magazine-details .detail {
+@media (min-width: 1200px) {
+  #magazine-details .container {
+    display: flex;
+    flex-wrap: wrap; } }
+#magazine-details .container .detail {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #565656;
   padding-bottom: 30px;
   margin-bottom: 30px; }
-  #magazine-details .detail:nth-child(13) {
+  @media (max-width: 767px) {
+    #magazine-details .container .detail {
+      flex-direction: column;
+      align-items: center; } }
+  @media (min-width: 1200px) {
+    #magazine-details .container .detail {
+      width: 33%; } }
+  #magazine-details .container .detail:nth-child(13) {
     border-bottom: 0px; }
-  #magazine-details .detail div {
+  #magazine-details .container .detail div {
     flex: 4;
     color: #bbb;
     font-size: 18px;
     line-height: 20px; }
-    #magazine-details .detail div + div {
-      flex: 6; }
-    #magazine-details .detail div img {
-      width: 250px;
+    #magazine-details .container .detail div + div {
+      flex: 6;
+      margin-left: 20px; }
+      @media (min-width: 1200px) {
+        #magazine-details .container .detail div + div {
+          margin: 0 15px 0 10px; } }
+      #magazine-details .container .detail div + div p {
+        font-size: 16px; }
+        @media (min-width: 1200px) {
+          #magazine-details .container .detail div + div p {
+            font-size: 14px; } }
+      @media (max-width: 767px) {
+        #magazine-details .container .detail div + div {
+          margin-left: 0px;
+          max-width: 250px; } }
+      @media (min-width: 1200px) {
+        #magazine-details .container .detail div + div {
+          flex: auto;
+          width: 150px; } }
+    #magazine-details .container .detail div img {
+      width: 100%;
+      max-width: 250px;
       outline: 1px solid #222222; }
-    #magazine-details .detail div h3 {
+    #magazine-details .container .detail div h3 {
       font-size: 28px;
       line-height: 40px;
       text-transform: uppercase;
       color: yellow; }
-    #magazine-details .detail div strong {
+      @media (min-width: 1200px) {
+        #magazine-details .container .detail div h3 {
+          font-size: 24px;
+          line-height: 28px; } }
+    #magazine-details .container .detail div strong {
       line-height: 40px; }
 #magazine-details footer {
   color: #cccccc;
@@ -186,9 +263,19 @@ h2 {
   #magazine-details footer .container {
     display: flex;
     justify-content: space-between; }
+    @media (max-width: 767px) {
+      #magazine-details footer .container {
+        flex-direction: column; } }
     #magazine-details footer .container h5 {
       font-size: 30px;
       line-height: 60px; }
+      @media (max-width: 767px) {
+        #magazine-details footer .container h5 {
+          font-size: 26px;
+          line-height: 40px; } }
+    #magazine-details footer .container img {
+      width: 100%;
+      max-width: 400px; }
 
 #magazines header {
   width: 100%;
@@ -201,10 +288,13 @@ h2 {
     align-items: center;
     justify-content: space-between; }
   #magazines header .header-box {
-    width: 130px;
+    display: flex;
+    align-items: center;
+    max-width: 130px;
+    max-height: 180px;
     margin-right: 15px; }
-    #magazines header .header-box img {
-      width: 100%; }
+  #magazines header img {
+    width: 100%; }
 #magazines h4 {
   font-size: 22px;
   color: #cccccc;
@@ -215,6 +305,9 @@ h2 {
   border-bottom: 1px solid #797979;
   padding: 5px 0;
   margin-bottom: 20px; }
+  @media (max-width: 767px) {
+    #magazines h4 {
+      font-size: 13px; } }
 #magazines article.container {
   display: flex;
   flex-wrap: wrap;
@@ -222,15 +315,21 @@ h2 {
   #magazines article.container div {
     width: 25%;
     max-width: 173px;
-    margin-bottom: 10px; }
+    margin-bottom: 15px; }
+    @media (max-width: 767px) {
+      #magazines article.container div {
+        width: 49%; } }
     #magazines article.container div img {
       width: 100%;
       outline: 1px solid #222222; }
     #magazines article.container div .img-interactions {
       display: flex;
       justify-content: space-between;
+      margin-top: -4px;
       /** CHECKBOX FLAT **/
       /** END CHECKBOX FLAT **/ }
+      #magazines article.container div .img-interactions .icon-magazine-open {
+        color: #555; }
       #magazines article.container div .img-interactions .contain {
         position: relative;
         right: 25px;
@@ -253,7 +352,7 @@ h2 {
         #magazines article.container div .img-interactions .contain input:checked ~ .checkmark:after {
           display: block; }
         #magazines article.container div .img-interactions .contain .checkmark:after {
-          left: 9px;
+          left: 7px;
           top: 2px;
           width: 9px;
           height: 15px;
@@ -265,10 +364,10 @@ h2 {
       #magazines article.container div .img-interactions .checkmark {
         position: absolute;
         top: 0;
-        left: 0;
-        height: 25px;
-        width: 25px;
-        background-color: #eee; }
+        left: 3px;
+        height: 22px;
+        width: 22px;
+        background-color: #555; }
         #magazines article.container div .img-interactions .checkmark:after {
           content: "";
           position: absolute;
@@ -280,7 +379,7 @@ h2 {
   justify-content: space-between; }
   #magazines-choosed .magazines-hide div {
     display: block;
-    width: 33%;
+    width: 32%;
     max-width: 236px;
     margin-bottom: 15px; }
     #magazines-choosed .magazines-hide div img {
@@ -297,16 +396,6 @@ h2 {
       width: 48%; }
     #magazines-choosed form .text-fields .fields-value input {
       color: #888; }
-    #magazines-choosed form .text-fields input {
-      width: 100%;
-      font-size: 66px;
-      font-weight: bold;
-      text-align: center;
-      background: transparent;
-      margin-bottom: 10px;
-      border: 0px;
-      color: yellow;
-      border-bottom: 1px solid #565656; }
   #magazines-choosed form .text-months {
     display: flex;
     justify-content: space-between; }
@@ -315,28 +404,39 @@ h2 {
       color: yellow; }
       #magazines-choosed form .text-months div + div input {
         color: #888; }
+      #magazines-choosed form .text-months div + div label {
+        color: #888; }
     #magazines-choosed form .text-months label {
       font-size: 54px; }
-    #magazines-choosed form .text-months input {
-      width: 50%;
-      font-size: 66px;
-      font-weight: bold;
-      text-align: center;
-      background: transparent;
-      margin-bottom: 10px;
-      border: 0px;
-      color: yellow;
-      border-bottom: 1px solid #565656; }
-  #magazines-choosed form .clean {
-    text-transform: uppercase;
-    color: white;
-    background: #555;
+      @media (max-width: 767px) {
+        #magazines-choosed form .text-months label {
+          font-size: 30px; } }
+  #magazines-choosed form input {
+    width: 100%;
+    font-size: 66px;
+    font-weight: bold;
+    text-align: center;
+    background: transparent;
+    margin-bottom: 10px;
     border: 0px;
-    border-radius: 5px;
-    padding: 10px;
-    margin-top: 30px; }
-    #magazines-choosed form .clean:hover {
-      color: black;
-      background: white; }
+    color: yellow;
+    border-bottom: 1px solid #565656; }
+    @media (max-width: 767px) {
+      #magazines-choosed form input {
+        font-size: 30px; } }
+    #magazines-choosed form input.clean {
+      width: auto;
+      font-size: 16px;
+      font-weight: 100;
+      text-transform: uppercase;
+      color: white;
+      background: #555;
+      border: 0px;
+      border-radius: 5px;
+      padding: 10px;
+      margin-top: 30px; }
+      #magazines-choosed form input.clean:hover {
+        color: black;
+        background: white; }
 
 /*# sourceMappingURL=style.css.map */

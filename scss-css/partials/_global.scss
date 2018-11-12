@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700,900');
 @font-face {
     font-family: "icons";
-    src:url("fonts/icons.woff?v=#{random(99999)}") format("woff");
+    src:url("../fonts/icons.woff?v=#{random(99999)}") format("woff");
     font-weight: normal;
     font-style: normal;
 }
@@ -19,20 +19,28 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-arrow-up:before {
+.icon-zoom:before {
     content: "\61";
 }
 
-.icon-arrow-left:before {
+.icon-menu:before {
     content: "\62";
 }
 
-.icon-book:before {
+.icon-magazine-open:before {
     content: "\63";
 }
 
-.icon-zoom:before {
+.icon-dollar-sign:before {
     content: "\64";
+}
+
+.icon-credit-card:before {
+    content: "\65";
+}
+
+.icon-magazine-cover:before {
+    content: "\66";
 }
 
 /***********END fonts************/
@@ -131,6 +139,9 @@ h2 {
     border-bottom: 1px solid #797979;
     padding: 15px 0;
     margin: 20px 0;
+    @include device(mobile){
+        font-size: 20px;
+    }
 }
 
 .container {
@@ -138,23 +149,49 @@ h2 {
     width: 100%;
     max-width: 768px;
     padding: 0 15px;
+    @include device(full){
+        max-width: 1200px;
+    }
 }
 
 .modal-nav {
     display: block;
     display: flex;
     flex-direction: column;
-    background: #ccc;
-    border: 1px solid #797979;
-    padding: 15px;
-    width: 80px;
-    height: 190px;
+    background: #222;
+    padding: 10px;
     position: fixed;
-    left: 0;
+    z-index: 9;
+    left: -60px;
     top: 50%;
     transform: translateY(-50%);
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
+    @include device(full){
+        left: 0;
+    }
+    [class*="icon-"] {
+        background: black;
+        color: white;
+        width: 35px;
+        height: 35px;
+        padding: 6px;
+        margin: 2px;
+        &:hover {
+            background: white;
+            color: black;
+        }
+    }
+    .icon-menu {
+        position: relative;
+        left: 48px;
+        background: #555;
+        box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
+        @include device(full){
+            left: 0px;
+        }
+    }
 }
 
 #modal {
-    display: none;    
+    display: none;
 }

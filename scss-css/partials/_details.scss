@@ -1,33 +1,69 @@
 #magazine-details {
-    .detail {
-        display: flex;
-        justify-content: space-between;
-        border-bottom: 1px solid #565656;
-        padding-bottom: 30px;
-        margin-bottom: 30px;
-        &:nth-child(13){
-            border-bottom: 0px;
+    .container {
+        @include device(full) {
+            display: flex;
+            flex-wrap: wrap;
         }
-        div {
-            flex: 4;
-            color: #bbb;
-            font-size: 18px;
-            line-height: 20px;
-            &+div {
-                flex: 6;
+        .detail {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #565656;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+            @include device(mobile) {
+                flex-direction: column;
+                align-items: center;
             }
-            img {
-                width: 250px;
-                outline: 1px solid #222222;
+            @include device(full) {
+                width: 33%
             }
-            h3 {
-                font-size: 28px;
-                line-height: 40px;
-                text-transform: uppercase;
-                color: yellow;
+            &:nth-child(13) {
+                border-bottom: 0px;
             }
-            strong {
-                line-height: 40px;
+            div {
+                flex: 4;
+                color: #bbb;
+                font-size: 18px;
+                line-height: 20px;
+                &+div {
+                    flex: 6;
+                    margin-left: 20px;
+                    @include device(full) {
+                        margin: 0 15px 0 10px;
+                    }
+                    p {
+                        font-size: 16px;
+                        @include device(full) {
+                            font-size: 14px;
+                        }
+                    }
+                    @include device(mobile) {
+                        margin-left: 0px;
+                        max-width: 250px;
+                    }
+                    @include device(full) {
+                        flex: auto;
+                        width: 150px;
+                    }
+                }
+                img {
+                    width: 100%;
+                    max-width: 250px;
+                    outline: 1px solid #222222;
+                }
+                h3 {
+                    font-size: 28px;
+                    line-height: 40px;
+                    text-transform: uppercase;
+                    color: yellow;
+                    @include device(full) {
+                        font-size: 24px;
+                        line-height: 28px;
+                    }
+                }
+                strong {
+                    line-height: 40px;
+                }
             }
         }
     }
@@ -38,9 +74,20 @@
         .container {
             display: flex;
             justify-content: space-between;
-            h5{
+            @include device(mobile) {
+                flex-direction: column;
+            }
+            h5 {
                 font-size: 30px;
                 line-height: 60px;
+                @include device(mobile) {
+                    font-size: 26px;
+                    line-height: 40px;
+                }
+            }
+            img {
+                width: 100%;
+                max-width: 400px;
             }
         }
     }

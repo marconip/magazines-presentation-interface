@@ -1,84 +1,104 @@
 #magazines-choosed {
-    .magazines-hide {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        div {
-            display: block;
-            width: 32%;
-            max-width: 236px;
-            margin-bottom: 15px;
-            img {
-                width: 100%;
-                outline: 1px solid #222222;
-            }
-        }
-    }
-    form {
-        text-align: center;
-        border-top: 1px solid #797979;
-        padding: 30px 0;
-        .text-fields {
+    article {
+        @include device(full) {
             display: flex;
+        }
+        .magazines-hide {
+            display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
-            [class*='fields-'] {
-                width: 48%;
+            @include device(full) {
+                justify-content: flex-start;
+                min-height: 500px;
             }
-            .fields-value {
-                input {
-                    color: #888;
+            div {
+                display: none;
+                width: 32%;
+                max-width: 236px;
+                margin-bottom: 15px;
+                @include device(full) {
+                    margin-left: 5px;
+                    margin-bottom: 5px;
+                    &:nth-child(4n+1) {
+                        margin-left: 0px;
+                    }
+                }
+                img {
+                    width: 100%;
+                    outline: 1px solid #222222;
                 }
             }
         }
-        .text-months {
-            display: flex;
-            justify-content: space-between;
-            div {
-                width: 48%;
-                color: yellow;
-                &+div {
+        form {
+            text-align: center;
+            border-top: 1px solid #797979;
+            padding: 25px 0;
+            @include device(full) {
+                border-top: 0px;
+                padding: 0px;
+            }
+            .text-fields {
+                display: flex;
+                justify-content: space-between;
+                [class*='fields-'] {
+                    width: 48%;
+                }
+                .fields-value {
                     input {
                         color: #888;
                     }
-                    label{
-                        color: #888;
+                }
+            }
+            .text-months {
+                display: flex;
+                justify-content: space-between;
+                div {
+                    width: 48%;
+                    color: yellow;
+                    &+div {
+                        input {
+                            color: #888;
+                        }
+                        label {
+                            color: #888;
+                        }
+                    }
+                }
+                label {
+                    font-size: 54px;
+                    @include device(mobile) {
+                        font-size: 30px;
                     }
                 }
             }
-            label {
-                font-size: 54px;
+            input {
+                width: 100%;
+                font-size: 66px;
+                font-weight: bold;
+                text-align: center;
+                background: transparent;
+                margin-bottom: 10px;
+                border: 0px;
+                color: yellow;
+                border-bottom: 1px solid #565656;
                 @include device(mobile) {
                     font-size: 30px;
                 }
-            }
-        }
-        input {
-            width: 100%;
-            font-size: 66px;
-            font-weight: bold;
-            text-align: center;
-            background: transparent;
-            margin-bottom: 10px;
-            border: 0px;
-            color: yellow;
-            border-bottom: 1px solid #565656;
-            @include device(mobile) {
-                font-size: 30px;
-            }
-            &.clean {
-                width: auto;
-                font-size: 16px;
-                font-weight: 100;
-                text-transform: uppercase;
-                color: white;
-                background: #555;
-                border: 0px;
-                border-radius: 5px;
-                padding: 10px;
-                margin-top: 30px;
-                &:hover {
-                    color: black;
-                    background: white;
+                &.clean {
+                    width: auto;
+                    font-size: 16px;
+                    font-weight: 100;
+                    text-transform: uppercase;
+                    color: white;
+                    background: #555;
+                    border: 0px;
+                    border-radius: 5px;
+                    padding: 10px;
+                    margin-top: 20px;
+                    &:hover {
+                        color: black;
+                        background: white;
+                    }
                 }
             }
         }

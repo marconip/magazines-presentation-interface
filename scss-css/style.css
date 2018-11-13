@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700,900");
 @font-face {
   font-family: "icons";
-  src: url("../fonts/icons.woff?v=9172") format("woff");
+  src: url("../fonts/icons.woff?v=79507") format("woff");
   font-weight: normal;
   font-style: normal; }
 [class*="icon-"]:before {
@@ -101,7 +101,7 @@ small {
 /***********END GLOBAL************/
 h2 {
   font-size: 30px;
-  color: #cccccc;
+  color: white;
   text-transform: uppercase;
   text-align: center;
   background: #333333;
@@ -133,7 +133,12 @@ h2 {
   left: -60px;
   top: 50%;
   transform: translateY(-50%);
-  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2); }
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.35s; }
+  .modal-nav.show-menu {
+    left: 0px; }
+    .modal-nav.show-menu .icon-menu {
+      position: initial; }
   @media (min-width: 1200px) {
     .modal-nav {
       left: 0; } }
@@ -147,6 +152,20 @@ h2 {
     .modal-nav [class*="icon-"]:hover {
       background: white;
       color: black; }
+      .modal-nav [class*="icon-"]:hover span {
+        left: 30px; }
+    .modal-nav [class*="icon-"] span {
+      background: white;
+      color: black;
+      font-size: 14px;
+      text-transform: uppercase;
+      padding: 9px;
+      position: relative;
+      bottom: 33px;
+      left: -100px;
+      z-index: -1;
+      box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
+      transition: 0.35s; }
   .modal-nav .icon-menu {
     position: relative;
     left: 48px;
@@ -154,11 +173,16 @@ h2 {
     box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2); }
     @media (min-width: 1200px) {
       .modal-nav .icon-menu {
-        left: 0px; } }
+        display: none; } }
 
 #modal {
   display: none; }
 
+@media (min-width: 1200px) {
+  #cards {
+    display: flex;
+    flex-direction: column;
+    min-height: 610px; } }
 #cards header {
   padding: 20px 0px 5px 0px;
   text-align: center; }
@@ -172,21 +196,24 @@ h2 {
   @media (max-width: 767px) {
     #cards h1 {
       font-size: 24px; } }
-#cards .card-box {
+@media (min-width: 1200px) {
+  #cards .container {
+    display: flex; } }
+#cards .container .card-box {
   display: flex;
   justify-content: space-between;
   margin: 15px 0; }
-  #cards .card-box div img {
+  #cards .container .card-box div img {
     width: 100%;
     max-width: 325px; }
     @media (max-width: 767px) {
-      #cards .card-box div img {
+      #cards .container .card-box div img {
         width: 95%; } }
-  #cards .card-box + .card-box div img {
+  #cards .container .card-box + .card-box div img {
     width: 100%;
     max-width: 200px; }
     @media (max-width: 767px) {
-      #cards .card-box + .card-box div img {
+      #cards .container .card-box + .card-box div img {
         width: 95%; } }
 #cards footer .cards-box {
   display: flex;
@@ -286,7 +313,8 @@ h2 {
   #magazines header .container {
     display: flex;
     align-items: center;
-    justify-content: space-between; }
+    justify-content: space-between;
+    max-width: 768px; }
   #magazines header .header-box {
     display: flex;
     align-items: center;
@@ -373,45 +401,62 @@ h2 {
           position: absolute;
           display: none; }
 
-#magazines-choosed .magazines-hide {
+@media (min-width: 1200px) {
+  #magazines-choosed article {
+    display: flex; } }
+#magazines-choosed article .magazines-hide {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; }
-  #magazines-choosed .magazines-hide div {
-    display: block;
+  @media (min-width: 1200px) {
+    #magazines-choosed article .magazines-hide {
+      justify-content: flex-start;
+      min-height: 500px; } }
+  #magazines-choosed article .magazines-hide div {
+    display: none;
     width: 32%;
     max-width: 236px;
     margin-bottom: 15px; }
-    #magazines-choosed .magazines-hide div img {
+    @media (min-width: 1200px) {
+      #magazines-choosed article .magazines-hide div {
+        margin-left: 5px;
+        margin-bottom: 5px; }
+        #magazines-choosed article .magazines-hide div:nth-child(4n+1) {
+          margin-left: 0px; } }
+    #magazines-choosed article .magazines-hide div img {
       width: 100%;
       outline: 1px solid #222222; }
-#magazines-choosed form {
+#magazines-choosed article form {
   text-align: center;
   border-top: 1px solid #797979;
-  padding: 30px 0; }
-  #magazines-choosed form .text-fields {
+  padding: 25px 0; }
+  @media (min-width: 1200px) {
+    #magazines-choosed article form {
+      border-top: 0px;
+      padding: 0px; } }
+  #magazines-choosed article form .text-fields {
     display: flex;
     justify-content: space-between; }
-    #magazines-choosed form .text-fields [class*='fields-'] {
+    #magazines-choosed article form .text-fields [class*='fields-'] {
       width: 48%; }
-    #magazines-choosed form .text-fields .fields-value input {
+    #magazines-choosed article form .text-fields .fields-value input {
       color: #888; }
-  #magazines-choosed form .text-months {
+  #magazines-choosed article form .text-months {
     display: flex;
     justify-content: space-between; }
-    #magazines-choosed form .text-months div {
+    #magazines-choosed article form .text-months div {
       width: 48%;
       color: yellow; }
-      #magazines-choosed form .text-months div + div input {
+      #magazines-choosed article form .text-months div + div input {
         color: #888; }
-      #magazines-choosed form .text-months div + div label {
+      #magazines-choosed article form .text-months div + div label {
         color: #888; }
-    #magazines-choosed form .text-months label {
+    #magazines-choosed article form .text-months label {
       font-size: 54px; }
       @media (max-width: 767px) {
-        #magazines-choosed form .text-months label {
+        #magazines-choosed article form .text-months label {
           font-size: 30px; } }
-  #magazines-choosed form input {
+  #magazines-choosed article form input {
     width: 100%;
     font-size: 66px;
     font-weight: bold;
@@ -422,9 +467,9 @@ h2 {
     color: yellow;
     border-bottom: 1px solid #565656; }
     @media (max-width: 767px) {
-      #magazines-choosed form input {
+      #magazines-choosed article form input {
         font-size: 30px; } }
-    #magazines-choosed form input.clean {
+    #magazines-choosed article form input.clean {
       width: auto;
       font-size: 16px;
       font-weight: 100;
@@ -434,8 +479,8 @@ h2 {
       border: 0px;
       border-radius: 5px;
       padding: 10px;
-      margin-top: 30px; }
-      #magazines-choosed form input.clean:hover {
+      margin-top: 20px; }
+      #magazines-choosed article form input.clean:hover {
         color: black;
         background: white; }
 

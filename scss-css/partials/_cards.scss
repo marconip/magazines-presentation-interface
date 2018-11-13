@@ -1,8 +1,13 @@
 #cards {
+    @include device(full){
+        display: flex;
+        flex-direction: column;
+        min-height: 610px;
+    }
     header {
         padding: 20px 0px 5px 0px;
         text-align: center;
-        @include device(mobile){
+        @include device(mobile) {
             padding-top: 50px;
         }
     }
@@ -10,30 +15,35 @@
         font-size: 50px;
         color: white;
         text-transform: uppercase;
-        @include device(mobile){
+        @include device(mobile) {
             font-size: 24px;
         }
     }
-    .card-box {
-        display: flex;
-        justify-content: space-between;
-        margin: 15px 0;
-        div {
-            img {
-                width: 100%;
-                max-width: 325px;
-                @include device(mobile){
-                    width: 95%;
-                }
-            }
+    .container {
+        @include device(full) {
+            display: flex;
         }
-        &+.card-box {            
+        .card-box {
+            display: flex;
+            justify-content: space-between;
+            margin: 15px 0;
             div {
                 img {
                     width: 100%;
-                    max-width: 200px;
-                    @include device(mobile){
+                    max-width: 325px;
+                    @include device(mobile) {
                         width: 95%;
+                    }
+                }
+            }
+            &+.card-box {
+                div {
+                    img {
+                        width: 100%;
+                        max-width: 200px;
+                        @include device(mobile) {
+                            width: 95%;
+                        }
                     }
                 }
             }

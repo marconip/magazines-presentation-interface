@@ -12,7 +12,9 @@
 
 <body>
     <div class="modal-nav">
-        <a href="#cards" class="icon-credit-card" title="Cartões"></a>
+        <a href="#cards" class="icon-credit-card">
+            <span>Cartões</span>
+        </a>
         <a href="#magazines" class="icon-magazine-cover" title="Revistas"></a>
         <a href="#magazines-choosed" class="icon-dollar-sign" title="Escolhas e Preços"></a>
         <a href="#magazine-details" class="icon-magazine-open" title="Detalhes"></a>
@@ -205,51 +207,52 @@
     <!-- VALUES AND MAGAZINES CHOOSED -->
     <section id="magazines-choosed">
         <h2>Suas Revistas Escolhidas</h2>
+        <article class="container">
+            <div class="magazines-hide container">
+                <div style="display:block"><img id="img00" src="image/capa-ep.jpg"></div>
+                <div><img id="img01" src="image/capa-gl.jpg"></div>
+                <div><img id="img02" src="image/capa-mc.jpg"></div>
+                <div><img id="img03" src="image/capa-gq.jpg"></div>
+                <div><img id="img04" src="image/capa-vg.jpg"></div>
+                <div ><img id="img05" src="image/capa-gal.jpg"></div>
+                <div><img id="img06" src="image/capa-cr.jpg"></div>
+                <div><img id="img07" src="image/capa-cjd.jpg"></div>
+                <div><img id="img08" src="image/capa-cvg.jpg"></div>
+                <div><img id="img09" src="image/capa-gr.jpg"></div>
+                <div><img id="img10" src="image/capa-auto.jpg"></div>
+                <div><img id="img11" src="image/capa-pgn.jpg"></div>
+                <div><img id="img12" src="image/capa-neg.jpg"></div>
+            </div>
 
-        <div class="magazines-hide container">
-            <div style="display:block"><img id="img00" src="image/capa-ep.jpg"></div>
-            <div><img id="img01" src="image/capa-gl.jpg"></div>
-            <div><img id="img02" src="image/capa-mc.jpg"></div>
-            <div><img id="img03" src="image/capa-gq.jpg"></div>
-            <div><img id="img04" src="image/capa-vg.jpg"></div>
-            <div><img id="img05" src="image/capa-gal.jpg"></div>
-            <div><img id="img06" src="image/capa-cr.jpg"></div>
-            <div><img id="img07" src="image/capa-cjd.jpg"></div>
-            <div><img id="img08" src="image/capa-cvg.jpg"></div>
-            <div><img id="img09" src="image/capa-gr.jpg"></div>
-            <div><img id="img10" src="image/capa-auto.jpg"></div>
-            <div><img id="img11" src="image/capa-pgn.jpg"></div>
-            <div><img id="img12" src="image/capa-neg.jpg"></div>
-        </div>
+            <div class="values container">
+                <form>
+                    <div class="text-fields">
+                        <div class="fields-price">
+                            <input type="text" class="money" pattern="[0-9]*" inputmode="numeric" maxlength="8">
+                            <input type="text" class="money" pattern="[0-9]*" inputmode="numeric" maxlength="8">
+                            <input type="text" class="money" pattern="[0-9]*" inputmode="numeric" maxlength="8">
+                        </div>
 
-        <div class="values container">
-            <form>
-                <div class="text-fields">
-                    <div class="fields-price">
-                        <input type="text" class="money" pattern="[0-9]*" inputmode="numeric" maxlength="8">
-                        <input type="text" class="money" pattern="[0-9]*" inputmode="numeric" maxlength="8">
-                        <input type="text" class="money" pattern="[0-9]*" inputmode="numeric" maxlength="8">
+                        <div class="fields-value">
+                            <input type="text" class="money" pattern="[0-9]*" inputmode="numeric" maxlength="8">
+                            <input type="text" class="money" pattern="[0-9]*" inputmode="numeric" maxlength="8">
+                        </div>
                     </div>
 
-                    <div class="fields-value">
-                        <input type="text" class="money" pattern="[0-9]*" inputmode="numeric" maxlength="8">
-                        <input type="text" class="money" pattern="[0-9]*" inputmode="numeric" maxlength="8">
+                    <div class="text-months">
+                        <div>
+                            <input type="text" id="months-price" pattern="[0-9]*" inputmode="numeric" maxlength="2">
+                            <label for="months-price">Meses</label>
+                        </div>
+                        <div>
+                            <input type="text" id="months-value" pattern="[0-9]*" inputmode="numeric" maxlength="2">
+                            <label for="months-value">Meses</label>
+                        </div>
                     </div>
-                </div>
-
-                <div class="text-months">
-                    <div>
-                        <input type="text" id="months-price" pattern="[0-9]*" inputmode="numeric" maxlength="2">
-                        <label for="months-price">Meses</label>
-                    </div>
-                    <div>
-                        <input type="text" id="months-value" pattern="[0-9]*" inputmode="numeric" maxlength="2">
-                        <label for="months-value">Meses</label>
-                    </div>
-                </div>
-                <input type="reset" class="clean" value="Limpar">
-            </form>
-        </div>
+                    <input type="reset" class="clean" value="Limpar">
+                </form>
+            </div>
+        </article>
     </section>
 
     <!-- MAGAZINE DETAILS -->

@@ -131,7 +131,7 @@ small {
 
 h2 {
     font-size: 30px;
-    color: #cccccc;
+    color: white;
     text-transform: uppercase;
     text-align: center;
     background: #333333;
@@ -139,7 +139,7 @@ h2 {
     border-bottom: 1px solid #797979;
     padding: 15px 0;
     margin: 20px 0;
-    @include device(mobile){
+    @include device(mobile) {
         font-size: 20px;
     }
 }
@@ -149,7 +149,7 @@ h2 {
     width: 100%;
     max-width: 768px;
     padding: 0 15px;
-    @include device(full){
+    @include device(full) {
         max-width: 1200px;
     }
 }
@@ -166,7 +166,14 @@ h2 {
     top: 50%;
     transform: translateY(-50%);
     box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
-    @include device(full){
+    transition: 0.35s;
+    &.show-menu {
+        left: 0px;
+        .icon-menu {
+            position: initial;
+        }
+    }
+    @include device(full) {
         left: 0;
     }
     [class*="icon-"] {
@@ -179,6 +186,22 @@ h2 {
         &:hover {
             background: white;
             color: black;
+            span {
+                left: 30px;
+            }
+        }
+        span {
+            background: white;
+            color: black;
+            font-size: 14px;
+            text-transform: uppercase;
+            padding: 9px;
+            position: relative;
+            bottom: 33px;
+            left: -100px;
+            z-index: -1;
+            box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.35s;
         }
     }
     .icon-menu {
@@ -186,8 +209,8 @@ h2 {
         left: 48px;
         background: #555;
         box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
-        @include device(full){
-            left: 0px;
+        @include device(full) {
+            display: none;
         }
     }
 }

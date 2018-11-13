@@ -1,4 +1,21 @@
-//MOSTRA IMAGEM SELECIONADA
+$(function () {
+
+    //SIDE MENU
+    $(".icon-menu").click(function (e) {
+        e.preventDefault();
+        $(".modal-nav").toggleClass("show-menu");
+    });
+    $(document).on("click", function (e) {
+        if ($(e.target).is(".icon-menu") === false) {
+            $(".modal-nav").removeClass("show-menu");
+        }
+    });
+
+    
+
+});
+
+/* //MOSTRA IMAGEM SELECIONADA
 function showhide(el) {
     var display = document.getElementById(el).style.display;
     if (display == "block")
@@ -35,4 +52,4 @@ $("#gototop").click(function () {
 
 //PREÇOS MASCARA
 //http://igorescobar.github.io/jQuery-Mask-Plugin/docs.html
-$('.money').mask('#.##0,00', { reverse: true });
+$('.money').mask('#.##0,00', { reverse: true }); */

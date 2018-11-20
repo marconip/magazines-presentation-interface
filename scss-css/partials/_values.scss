@@ -6,23 +6,15 @@
         .magazines-hide {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
+            justify-content: flex-start;
             @include device(full) {
-                justify-content: flex-start;
                 min-height: 500px;
             }
             div {
                 display: none;
                 width: 32%;
                 max-width: 236px;
-                margin-bottom: 15px;
-                @include device(full) {
-                    margin-left: 5px;
-                    margin-bottom: 5px;
-                    &:nth-child(4n+1) {
-                        margin-left: 0px;
-                    }
-                }
+                margin: 0px 2px 15px 2px;                
                 img {
                     width: 100%;
                     outline: 1px solid #222222;

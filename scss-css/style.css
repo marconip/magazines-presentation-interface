@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700,900");
 @font-face {
   font-family: "icons";
-  src: url("../fonts/icons.woff?v=79507") format("woff");
+  src: url("../fonts/icons.woff?v=12633") format("woff");
   font-weight: normal;
   font-style: normal; }
 [class*="icon-"]:before {
@@ -155,17 +155,21 @@ h2 {
       .modal-nav [class*="icon-"]:hover span {
         left: 30px; }
     .modal-nav [class*="icon-"] span {
-      background: white;
-      color: black;
-      font-size: 14px;
-      text-transform: uppercase;
-      padding: 9px;
-      position: relative;
-      bottom: 33px;
-      left: -100px;
-      z-index: -1;
-      box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
-      transition: 0.35s; }
+      display: none; }
+    @media (min-width: 1200px) {
+      .modal-nav [class*="icon-"] span {
+        display: inline-block;
+        background: white;
+        color: black;
+        font-size: 14px;
+        text-transform: uppercase;
+        padding: 9px;
+        position: relative;
+        bottom: 34px;
+        left: -105px;
+        z-index: -1;
+        box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.35s; } }
   .modal-nav .icon-menu {
     position: relative;
     left: 48px;
@@ -176,8 +180,37 @@ h2 {
         display: none; } }
 
 #modal {
-  display: none; }
-
+  display: none;
+  position: fixed;
+  z-index: 9;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.8); }
+  #modal #modal-img {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 600px;
+    /* Add Animation */
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s; }
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0); }
+  to {
+    -webkit-transform: scale(1); } }
+@keyframes zoom {
+  from {
+    transform: scale(0); }
+  to {
+    transform: scale(1); } }
 @media (min-width: 1200px) {
   #cards {
     display: flex;
@@ -407,22 +440,15 @@ h2 {
 #magazines-choosed article .magazines-hide {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; }
+  justify-content: flex-start; }
   @media (min-width: 1200px) {
     #magazines-choosed article .magazines-hide {
-      justify-content: flex-start;
       min-height: 500px; } }
   #magazines-choosed article .magazines-hide div {
     display: none;
     width: 32%;
     max-width: 236px;
-    margin-bottom: 15px; }
-    @media (min-width: 1200px) {
-      #magazines-choosed article .magazines-hide div {
-        margin-left: 5px;
-        margin-bottom: 5px; }
-        #magazines-choosed article .magazines-hide div:nth-child(4n+1) {
-          margin-left: 0px; } }
+    margin: 0px 2px 15px 2px; }
     #magazines-choosed article .magazines-hide div img {
       width: 100%;
       outline: 1px solid #222222; }

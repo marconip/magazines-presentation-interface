@@ -65,7 +65,7 @@
             }
             input {
                 width: 100%;
-                font-size: 66px;
+                font-size: 59px;
                 font-weight: bold;
                 text-align: center;
                 background: transparent;
@@ -74,7 +74,7 @@
                 color: yellow;
                 border-bottom: 1px solid #565656;
                 @include device(mobile) {
-                    font-size: 30px;
+                    font-size: 27px;
                 }
                 &.clean {
                     width: auto;

@@ -4,14 +4,16 @@ $(function () {
     $(".icon-menu").click(function () {
         $(".modal-nav").toggleClass("show-menu");
     });
-    //SIDE MENU - WHEN CLICK IS NOT MENU LINK
+
+    //SIDE MENU - CLICK OUTSIDE MENU LINK
     $(document).on("click", function (e) {
         if ($(e.target).is(".icon-menu") === false) {
             $(".modal-nav").removeClass("show-menu");
         }
     });
-    //SIDE MENU - SMOOTH SCROLLING WHEN CLICKING AN ANCHOR LINK
-    $(document).on('click', '.modal-nav a', function (event) {
+
+    //LINKS ONPAGE - SMOOTH SCROLLING AND NO HASTEG ON URL, WHEN CLICKING AN ANCHOR LINK
+    $(document).on('click', '.allmagazines a, .modal-nav a', function (event) {
         event.preventDefault();
         $('html, body').animate({
             scrollTop: $($.attr(this, 'href')).offset().top
@@ -27,18 +29,16 @@ $(function () {
         }
     });
 
-    //ADICIONA CLASSE MOSTRANDO O SELECIONADO
+    //ADD CLASS IF INPUT CHECKED
     $('.selected').click(function () {
-        $(this).toggleClass('active');
+        $(this).toggleClass('check');
 
-        //AVISO DE QUANTIDADES SELECIONADAS
-        var maxselected = document.querySelectorAll(".active");
-        if (maxselected.length == 3) {
+        //ALERT NUMBER SELECTED
+        var maxcheck = $(".check");
+        if (maxcheck.length == 3) {
             alert("JÁ TEMOS 2 SELECIONADOS \nMas pode continuar selecionando")
         }
     });
-
-    //usar data para mostrar imagens abaixo/selecionadas
 
     //MASK PRICES
     //http://igorescobar.github.io/jQuery-Mask-Plugin/docs.html
@@ -46,8 +46,7 @@ $(function () {
 
 });
 
-//SHOW IMAGE SELECTED
-/* 
+//SHOW IMAGE SELECTED IN OTHER PLACE
 function showhide(el) {
     var display = document.getElementById(el).style.display;
     if (display == "block")
@@ -55,4 +54,3 @@ function showhide(el) {
     else
         document.getElementById(el).style.display = 'block';
 };
-*/

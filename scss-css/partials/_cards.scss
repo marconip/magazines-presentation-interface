@@ -1,5 +1,5 @@
 #cards {
-    @include device(full){
+    @include device(full) {
         display: flex;
         flex-direction: column;
         min-height: 610px;
@@ -28,6 +28,9 @@
             justify-content: space-between;
             margin: 15px 0;
             div {
+                @include device(mobile) {
+                    text-align: center;
+                }
                 img {
                     width: 100%;
                     max-width: 325px;

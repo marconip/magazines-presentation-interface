@@ -58,6 +58,9 @@
                     margin-top: -4px;
                     .icon-magazine-open {
                         color: #555;
+                        &:hover{
+                            color: #2196F3;
+                        }
                     }
                     /** CHECKBOX FLAT **/
                     .contain {
@@ -75,44 +78,63 @@
                             cursor: pointer;
                             height: 0;
                             width: 0;
+                            &:hover {
+                                +.checkmark {
+                                    background-color: #2196F3;
+                                }
+                            }
+                            &:checked {
+                                +.checkmark {
+                                    background-color: #2196F3;
+                                }
+                                +.checkmark {
+                                    &:before {
+                                        display: block;
+                                    }
+                                    &:after {
+                                        display: block;
+                                    }
+                                }
+                            }
                         }
-                        &:hover input~.checkmark {
-                            background-color: #ccc;
-                        }
-                        input:checked~.checkmark {
-                            background-color: #2196F3;
-                        }
-                        input:checked~.checkmark:after {
-                            display: block;
-                        }
-                        .checkmark:after {
-                            left: 7px;
-                            top: 2px;
-                            width: 9px;
-                            height: 15px;
-                            border: solid white;
-                            border-width: 0 3px 3px 0;
-                            -webkit-transform: rotate(45deg);
-                            -ms-transform: rotate(45deg);
-                            transform: rotate(45deg);
-                        }
-                    }
-                    .checkmark {
-                        position: absolute;
-                        top: 0;
-                        left: 3px;
-                        height: 22px;
-                        width: 22px;
-                        background-color: #555;
-                        &:after {
-                            content: "";
+                        .checkmark {
                             position: absolute;
-                            display: none;
+                            top: 0;
+                            left: 3px;
+                            height: 22px;
+                            width: 22px;
+                            background-color: #555;
+                            &:before {
+                                content: "Selecionado";
+                                position: absolute;
+                                display: none;
+                                right: 25px;
+                                top: 4px;
+                                color: #2196f3;
+                                font-size: 15px;
+                            }
+                            &:after {
+                                content: "";
+                                position: absolute;
+                                display: none;
+                                left: 7px;
+                                top: 2px;
+                                width: 9px;
+                                height: 15px;
+                                border: solid white;
+                                border-width: 0 3px 3px 0;
+                                -webkit-transform: rotate(45deg);
+                                -ms-transform: rotate(45deg);
+                                transform: rotate(45deg);
+                            }
                         }
                     }
                     /** END CHECKBOX FLAT **/
                 }
             }
+        }
+        .active {
+            opacity: 0.1;
         }
     }
 }
